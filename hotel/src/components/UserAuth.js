@@ -13,7 +13,7 @@ const UserAuth = ({ children }) => {
     if (user?.role === 'hotel') {
       router?.replace('/users/home'); // Replace the URL instead of pushing it
     }else{
-        router?.replace('/auth/login')
+        router?.replace('auth/create-profile')
     }
   }, []);
 

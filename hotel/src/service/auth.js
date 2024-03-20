@@ -3,7 +3,7 @@
 import Cookies from 'js-cookie';
 import {jwtDecode} from 'jwt-decode';
 
-const TOKEN_KEY = 'jwtToken';
+const TOKEN_KEY = 'token';
 
 export const login = (token) => {
   Cookies.set(TOKEN_KEY, token);

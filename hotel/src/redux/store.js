@@ -1,11 +1,12 @@
 // redux/store.js
 
 import { configureStore } from '@reduxjs/toolkit';
-import rootReducer from './reducers';
-
+import LoginReducer from './slices/LoginSlice'
 const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
   // Add middleware if needed
+  login: LoginReducer
+  }
 });
 
 export default store;

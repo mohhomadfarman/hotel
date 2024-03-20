@@ -2,7 +2,8 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='btn'>page</div>
+    <div className='Login Wrraper'>
+    </div>
   )
 }
 

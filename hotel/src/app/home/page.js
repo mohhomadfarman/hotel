@@ -1,9 +1,9 @@
 import React from 'react'
 
-function page() {
+function MeinApp() {
   return (
-    <div>page</div>
+    <div>Home</div>
   )
 }
 
-export default page
+export default MeinApp

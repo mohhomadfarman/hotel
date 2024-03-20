@@ -1,19 +1,17 @@
 
 "use client"
 import React, { useEffect } from 'react'
-import { Provider, useDispatch } from 'react-redux'
+import {useDispatch } from 'react-redux'
 import { loginApi } from '../redux/AuthAction';
-import store from '../redux/store';
+import MeinApp from './home/page';
 
 function page({children}) {
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(loginApi())
-  })
+  },[])
   return (
-    <Provider store={store}>
-      {children}
-    </Provider>
+<MeinApp/>
   );
 }
 
