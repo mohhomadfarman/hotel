@@ -769,19 +769,19 @@ function MeinApp() {
                   
 
           <Tab.Content className="video-frame-body">
-          <div className="logo-imgae-tab">
-                      <Image
-                        src="/luxury-hotel-logo.png"
-                        className="img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-
-
-                    </div>
+         <h3 >HOTEL NAME HERE</h3>
             <Tab.Pane eventKey="first" className="tab-video-bg">
             <div className="background-video tab-video-bg-height">
+            <div className="logo-imgae-tab placeholders d-flex flex-column">
+                      <Image
+                        src="/logo.svg"
+                        className="m-auto "
+                        width={600}
+                        height={50}
+                        alt=""
+                      />
+                      <p className="text-center">PRESENTS</p>
+                    </div>
                         <iframe
                           loading="lazy"
                           style={{ width: "100%" }}
