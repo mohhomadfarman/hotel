@@ -84,7 +84,7 @@ l-140 0 0 -680z m357 477 c134 -68 191 -229 129 -362 -47 -101 -158 -170 -263
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav ms-auto gap-4">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" href="#">Home</Link>
+                <Link className="nav-link active" aria-current="page" href="/">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" href="#">Luxury Hotels & Resorts</Link>

@@ -4,6 +4,10 @@ import React, { useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Carousel from "react-bootstrap/Carousel";
+import Col from 'react-bootstrap/Col';
+import Nav from 'react-bootstrap/Nav';
+import Row from 'react-bootstrap/Row';
+import Tab from 'react-bootstrap/Tab';
 function MeinApp() {
   const swiperTabs = useSwiper();
   useEffect(() => {
@@ -45,9 +49,9 @@ function MeinApp() {
               ></iframe>
             </div>
 
-            <div className="container video-text">
-              <div className="row align-items-center justify-content-center">
-                <div className="col-md-5">
+            <div className="container video-text" style={{maxWidth:"1320px"}}>
+              <div className="row align-items-center justify-content-start">
+                <div className="col-lg-5 col-md-7">
                   <div className="text-for-video-bg">
                     <p>
                       <span>Luxury Hotels</span>, a renowned global brand
@@ -70,7 +74,7 @@ function MeinApp() {
                   </div>
                 </div>
 
-                <div className="col-md-6">
+                <div className="col-lg-6 col-md-5">
                   <div className="text-center video-text-logo">
                     <svg
                       version="1.0"
@@ -220,7 +224,7 @@ function MeinApp() {
       <div className="section-newly-hotel-card">
         <div className="container">
           <div className="row">
-            <div className="col-md-6 ">
+            <div className="col-md-6 d-flex">
               <div className="newly-hotel-card">
                 <a href="#">
                   <div className="card">
@@ -734,8 +738,9 @@ function MeinApp() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="newly-hotel-body univeil-luxe">
-                <h1>UnveiI New Luxe Getaways Every Week</h1>
+
+              <div className="newly-hotel-body">
+                <h1>UNVEIL NEW LUXE GETAWAYS EVERY WEEK</h1>
               </div>
             </div>
           </div>
@@ -744,58 +749,27 @@ function MeinApp() {
 
       <div className="section-video-tab section-top-video-bg">
         <div className="container">
+        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <div className="row">
             <div className="col-md-12">
               <div className="video-tab-body">
                 <div className="d-flex  flex-column flex-lg-row align-items-start">
-                  <div
-                    className="nav d-flex flex-lg-column flex-row justify-content-center gap-lg-0 gap-4 section-video-sections nav-pills me-3"
-                    id="v-pills-tab"
-                    role="tablist"
-                    aria-orientation="vertical"
-                  >
-                    <button
-                      className="nav-link active"
-                      id="v-pills-home-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#v-pills-home"
-                      type="button"
-                      role="tab"
-                      aria-controls="v-pills-home"
-                      aria-selected="true"
-                    >
-                      Home
-                    </button>
-                    <button
-                      className="nav-link"
-                      id="v-pills-profile-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#v-pills-profile"
-                      type="button"
-                      role="tab"
-                      aria-controls="v-pills-profile"
-                      aria-selected="false"
-                    >
-                      Profile
-                    </button>
-                    <button
-                      className="nav-link"
-                      id="v-pills-messages-tab"
-                      data-bs-toggle="pill"
-                      data-bs-target="#v-pills-messages"
-                      type="button"
-                      role="tab"
-                      aria-controls="v-pills-messages"
-                      aria-selected="false"
-                    >
-                      Messages
-                    </button>
-                  </div>
-                  <div
-                    className="tab-content video-frame-body"
-                    id="v-pills-tabContent"
-                  >
-                    <div className="logo-imgae-tab">
+
+                <Nav variant="pills" className="nav d-flex flex-lg-column flex-row justify-content-center gap-lg-0 gap-4 section-video-sections nav-pills me-3">
+            <Nav.Item>
+              <Nav.Link eventKey="first">France</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="second"> Profile</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="third"> Messages</Nav.Link>
+            </Nav.Item>
+          </Nav>
+                  
+
+          <Tab.Content className="video-frame-body">
+          <div className="logo-imgae-tab">
                       <Image
                         src="/luxury-hotel-logo.png"
                         className="img-fluid"
@@ -803,39 +777,11 @@ function MeinApp() {
                         height={100}
                         alt=""
                       />
-                    </div>
-                    <div
-                      className="tab-pane fade show active tab-video-bg"
-                      id="v-pills-home"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-home-tab"
-                      tabIndex="0"
-                    >
-                      <div className="background-video tab-video-bg-height">
-                        <iframe
-                          loading="lazy"
-                          style={{ width: "100%" }}
-                          id="ytplayer"
-                          type="text/html"
-                          width="100%"
-                          height="450px"
-                          src="https://www.youtube.com/embed/_-TTQBUPz6w,?&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;color=white&amp;controls=0&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;enablejsapi=1&amp;playlist=_-TTQBUPz6w,"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen=""
-                          className="loaded"
-                        ></iframe>
-                      </div>
-                    </div>
 
-                    <div
-                      className="tab-pane fade"
-                      id="v-pills-profile"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-profile-tab"
-                      tabIndex="0"
-                    >
-                      <div className="background-video">
+
+                    </div>
+            <Tab.Pane eventKey="first" className="tab-video-bg">
+            <div className="background-video tab-video-bg-height">
                         <iframe
                           loading="lazy"
                           style={{ width: "100%" }}
@@ -850,15 +796,9 @@ function MeinApp() {
                           className="loaded"
                         ></iframe>
                       </div>
-                    </div>
-                    <div
-                      className="tab-pane fade"
-                      id="v-pills-messages"
-                      role="tabpanel"
-                      aria-labelledby="v-pills-messages-tab"
-                      tabIndex="0"
-                    >
-                      <div className="background-video">
+          
+            </Tab.Pane>
+            <Tab.Pane eventKey="second"><div className="background-video tab-video-bg-height">
                         <iframe
                           loading="lazy"
                           style={{ width: "100%" }}
@@ -872,13 +812,29 @@ function MeinApp() {
                           allowFullScreen=""
                           className="loaded"
                         ></iframe>
-                      </div>
-                    </div>
-                  </div>
+                      </div></Tab.Pane>
+            <Tab.Pane eventKey="third"><div className="background-video tab-video-bg-height">
+                        <iframe
+                          loading="lazy"
+                          style={{ width: "100%" }}
+                          id="ytplayer"
+                          type="text/html"
+                          width="100%"
+                          height="450px"
+                          src="https://www.youtube.com/embed/_-TTQBUPz6w,?&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;color=white&amp;controls=0&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;enablejsapi=1&amp;playlist=_-TTQBUPz6w,"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen=""
+                          className="loaded"
+                        ></iframe>
+                      </div></Tab.Pane>
+          </Tab.Content>
+
                 </div>
               </div>
             </div>
           </div>
+          </Tab.Container>
         </div>
       </div>
 
@@ -1154,10 +1110,10 @@ function MeinApp() {
               <div className="who-we-are mb-2 d-flex justify-content-between align-items-center">
                 <h1>GENERAL NEWS</h1>
                 <div className="d-flex gap-4 pointer custom-pagnigation">
-                  <span className="prev">
+                  <span className="prev1">
                     <i className="bi bi-chevron-left"></i>
                   </span>
-                  <span className="next">
+                  <span className="next1">
                     <i className="bi bi-chevron-right"></i>
                   </span>
                 </div>
@@ -1166,8 +1122,8 @@ function MeinApp() {
             <div className="col-md-12">
               <Swiper
                 navigation={{
-                  prevEl: ".prev",
-                  nextEl: ".next",
+                  prevEl: ".prev1",
+                  nextEl: ".next1",
                 }}
                 modules={[Navigation]}
                 // navigation={true}
@@ -1313,19 +1269,19 @@ function MeinApp() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <div className="prev pointer">
+              <div className=" next2 pointer left-navigation">
                 {" "}
                 <Image src="/arrows.svg" width={80} height={80} alt="" />
               </div>
-              <div className="next pointer">
+              <div className=" prev2 pointer right-navigation">
                 {" "}
                 <Image src="/arrows.svg" width={80} height={80} alt="" />
               </div>
 
               <Swiper
                 navigation={{
-                  prevEl: ".prev",
-                  nextEl: ".next",
+                  prevEl: ".prev2",
+                  nextEl: ".next2",
                 }}
                 modules={[Navigation]}
                 spaceBetween={50}
@@ -1429,77 +1385,7 @@ function MeinApp() {
                 </SwiperSlide>
               </Swiper>
 
-              {/* <div className="swiper swiper2">
-                  <div className="swiper-wrapper">
-                    <div className="swiper-slide">
-                      <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
-                        <div className="card-body px-0 pb-0">
-                              <a href="#">Read More</a>
-                        </div>
-                      </div>
-                 </div>
-
-                   <div className="swiper-slide">
-                    <div className="card hotel-news-swipe last-claim-swiper my-3">
-                    <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
-                      <div className="card-body px-0 pb-0">
-
-                            <a href="#">Read More</a>
-                       
-                      </div>
-                    </div>
-                  </div>
-
-                    <div className="swiper-slide">
-                      <div className="card hotel-news-swipe last-claim-swiper my-3">
-                      <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
-                        <div className="card-body px-0 pb-0">
-
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
-                  </div>
-
-              <div className="swiper-slide">
-                <div className="card hotel-news-swipe last-claim-swiper my-3">
-                <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
-                  <div className="card-body px-0 pb-0">
-
-                        <a href="#">Read More</a>
-                   
-                  </div>
-                </div>
-                  </div>
-
-                   <div className="swiper-slide">
-                    <div className="card hotel-news-swipe last-claim-swiper my-3">
-                    <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
-                      <div className="card-body px-0 pb-0">
-                        
-                            <a href="#">Read More</a>
-                       
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="swiper-slide">
-                    <div className="card hotel-news-swipe last-claim-swiper my-3">
-                    <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
-                      <div className="card-body px-0 pb-0">
-                            <a href="#">Read More</a>
-                       
-                      </div>
-                    </div>
-               </div>
-
-                  </div>
-                 <div id="left-btn" className="swiper-button-prev claim-pagination "></div>
-                 <div id="right-btn" className="swiper-button-next claim-pagination"></div>
-             
-                
-                </div> */}
+           
             </div>
           </div>
         </div>
@@ -1512,10 +1398,18 @@ function MeinApp() {
       <div className="select-bg-body subscribe">
         <div className="container ">
           <div className="row align-items-center justify-content-center">
+            <div className="col-md-12">
+              <div className=" section-first-swiper">
+            <div className="who-we-are mb-2 d-flex justify-content-between align-items-center">
+               
+               <div className="text-center">
+                 <h1>Subscribe Newsletter</h1>
+               </div>
+               </div>
+               </div>
+               </div>
             <div className="col-md-7">
-              <div className="text-center">
-                <h1>Subscribe Newsletter</h1>
-              </div>
+           
               <div className="d-flex spacialist align-items-center gap-1">
                 <div className="search-name w-100">
                   <div className="d-flex align-items-center email-input">

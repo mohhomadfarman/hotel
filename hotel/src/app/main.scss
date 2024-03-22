@@ -176,6 +176,7 @@ a{
     padding: 15px 28px;
     margin-bottom: 0;
     margin-top: 16px;
+    text-align: start;
   }
   .section-newly-listen-hotel .newly-hotel-body{
     text-align: center;
@@ -204,6 +205,7 @@ a{
     font-weight: 400;
     font-family: "Radley", serif;
     line-height: 21.4px;
+    text-transform: uppercase;
 
   }
 
@@ -227,7 +229,8 @@ a{
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Radley", serif;
+    text-transform: uppercase;
     margin: 0;
   }
 
@@ -357,7 +360,7 @@ a{
   background-position: center center;
   background-size: cover;
 }
-.section-video-tab button{
+.section-video-tab a{
   padding: 8.41px 105.74px 8.41px 105.74px;
   background-color: #fff;
   color: #B6191F;
@@ -433,14 +436,15 @@ a{
 }
 .select-bg-body.subscribe h1{
   color: #846316;
-  font-size: 44px;
+  // font-size: 44px;
   font-weight: 400;
   font-family:"Radley", serif;
-  margin-bottom: 35px;
+  // margin-bottom: 35px;
 }
 
 .section-first-swiper.section-hotel-new-swiper{
   background-color:#fff;
+  padding: 10px;
 }
 
 .section-hotel-new-swiper .card.hotel-news-swipe{
@@ -591,7 +595,23 @@ text-decoration: none;
   padding-bottom:8px;
 
 }
-
+.section-hotel-new-swiper.claim-swiper{
+position: relative;
+}
+.left-navigation
+{
+  position: absolute;
+  top: 40%;
+  right: 70px;
+  z-index: 12;
+}
+.right-navigation{
+  position: absolute;
+  top: 40%;
+  left: 70px;
+  z-index: 12;
+  rotate: 180deg;
+}
 
 
 @media(max-width:1401px){
@@ -627,7 +647,7 @@ text-decoration: none;
     flex-direction: row !important;
     width: 100%;
   }
-  .section-video-tab button
+  .section-video-tab a
   {
     padding: 10px 30px;
   }
@@ -640,6 +660,11 @@ text-decoration: none;
 
 
 @media(max-width:769px){
+  .section-top-video-bg .text-for-video-bg
+  {
+display: none;
+
+  }
   .section-carausel .carausel-perent img{
     height: 100%;
   }
