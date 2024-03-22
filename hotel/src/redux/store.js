@@ -1,11 +1,12 @@
 // redux/store.js
 
 import { configureStore } from '@reduxjs/toolkit';
-import LoginReducer from './slices/LoginSlice'
+import SignupReducer from './slices/Signup'
 const store = configureStore({
   reducer: {
   // Add middleware if needed
-  login: LoginReducer
+  // login: LoginReducer
+  Register: SignupReducer
   }
 });
 

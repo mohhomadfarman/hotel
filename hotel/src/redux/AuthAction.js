@@ -11,8 +11,8 @@ export const axiosInstance = axios.create({
   },
 });
 
-export const loginApi = createAsyncThunk("login", async (payload) => {
-  const response = await axiosInstance.post(`/login`, payload)
+export const signup = createAsyncThunk("signup", async (payload) => {
+  const response = await axiosInstance.post(`/api/hotels/signup`, payload)
   return response.data;
 })
 

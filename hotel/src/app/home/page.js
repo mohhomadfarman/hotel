@@ -8,8 +8,12 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
+import { toast } from "react-toastify";
 function MeinApp() {
   const swiperTabs = useSwiper();
+  useEffect(()=>{
+    toast("hello")
+    },[])
   useEffect(() => {
     // Function to handle messages from the iframe
     const handleMessage = (event) => {

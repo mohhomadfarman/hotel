@@ -1,10 +1,36 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import "./signup.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { signup } from "../../../redux/AuthAction";
+import { toast } from "react-toastify";
 
 function page() {
+const [name, setName] = useState()
+const [email, setEmail] = useState()
+const [password, setPassword] = useState()
+const [cPassword, setCPassword] = useState()
+
+  const dispatch = useDispatch()
+const OnSubmit = () =>{
+  const payload = {
+      name:name,
+      email:email,
+      password:password === cPassword ? password :undefined
+  }
+  const CheckPassword = password === cPassword
+    if(CheckPassword && payload?.password !== undefined && name && email){
+    dispatch(signup(payload))
+  }else{
+    toast(' Please fill all the inputs')
+  }
+}
+const isLoading = useSelector((state)=>state?.Register?.isLoading)
+const Message = useSelector((state)=>state?.Register?.dara?.msg)
+console.log(isLoading)
   return (
     <>
-      <div className="section-list-luxury">
+      <div className="section-list-luxury mb-0">
         <div className="container">
           <div className="row">
             <div className="col-md-6 m-auto">
@@ -21,232 +47,64 @@ function page() {
               </div>
             </div>
             <div className="col-md-6">
-              <div className="form">
+              {!Message ? (              <div className="form">
                 <div className="form-floating mb-3">
                   <input
+                  onChange={(e)=>setName(e.target.value)}
+                    type="text"
+                    className="form-control"
+                    id="floatingInput"
+                    placeholder="Your Name"
+                  />
+                  <label htmlFor="floatingInput">Your Name</label>
+                </div>
+                <div className="form-floating mb-3">
+                  <input
+                   onChange={(e)=>setEmail(e.target.value)}
                     type="email"
                     className="form-control"
                     id="floatingInput"
                     placeholder="name@example.com"
                   />
-                  <label for="floatingInput">Your Name</label>
+                  <label htmlFor="floatingInput">Email address</label>
                 </div>
                 <div className="form-floating mb-3">
                   <input
-                    type="email"
-                    className="form-control"
-                    id="floatingInput"
-                    placeholder="name@example.com"
-                  />
-                  <label for="floatingInput">Email address</label>
-                </div>
-                <div className="form-floating mb-3">
-                  <input
+                   onChange={(e)=>setPassword(e.target.value)}
                     type="password"
                     className="form-control"
                     id="floatingPassword"
                     placeholder="Password"
                   />
-                  <label for="floatingPassword">Password</label>
+                  <label htmlFor="floatingPassword">Password</label>
                 </div>
                 <div className="form-floating">
                   <input
+                   onChange={(e)=>setCPassword(e.target.value)}
                     type="password"
                     className="form-control"
                     id="floatingPassword"
                     placeholder="Password"
                   />
-                  <label for="floatingPassword">Confirm Password</label>
+                  <label htmlFor="floatingPassword">Confirm Password</label>
                 </div>
 
-                <button type="button">Submit</button>
+                <button type="submit" onClick={OnSubmit}>Submit</button>
 
                 <div className="already-have-account">
                   <p>
                     Already have an account! <a href="#">Login.</a>
                   </p>
                 </div>
-              </div>
+              </div>):
+              (<div>{Message}</div>)
+              }
+
             </div>
           </div>
         </div>
       </div>
 
-      <div className="section-newly-listen-hotel benefit-working-us">
-        <div className="container container-width">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="newly-hotel-body">
-                <h1> BENEFITS OF WORKING WITH US</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="section-short-card">
-        <div className="container container-width">
-          <div className="row">
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-repeat "></i>
-                <h3>Each Edition Rotation Program</h3>
-                <p>
-                  Your hotel will be one of the top 40 most luxurious hotels
-                  which will guarantee the flow of bookings and occupancy
-                  ranging from 800,000 to 1 million tourists annually.
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-recycle"></i>
-                <h3>Zero commission charges</h3>
-                <p>
-                  The hotel receives the full amount from all bookings made.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-globe "></i>
-                <h3>Global exposure</h3>
-                <p>
-                  Utilizing our AI technology, your hotel profile will be
-                  automatically shared with our extensive network of over 1
-                  million subscribers.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-child"></i>
-                <h3>Global Reach</h3>
-                <p>
-                  Published & Promoted in 89 countries, integrating online (70%)
-                  and print (30%) components.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-internet-explorer"></i>
-                <h3>Extensive Digital Presence</h3>
-                <p>
-                  Our magazines are available as free downloads on 5 independent
-                  digital platforms, attracting 4-5 million readers per edition.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-facebook-square"></i>
-                <h3>Social Media Engagement</h3>
-                <p>
-                  We actively promote all of our hotels on 13 social networks,
-                  engaging with 13 million monthly users.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-newspaper-o"></i>
-                <h3>Flexibility to add Exclusive Offers</h3>
-                <p>Could be published & changed any time during the year.</p>
-              </div>
-            </div>
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-address-book"></i>
-                <h3>Effortless Bookings</h3>
-                <p>
-                  Every hotel ad in the printed version is accompanied by QR
-                  codes with direct access to your website for easy bookings.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-database "></i>
-                <h3>Data Analysis</h3>
-                <p>
-                  Demonstrate that this program has increased direct bookings
-                  for each hotel by an impressive 60%.
-                </p>
-              </div>
-            </div>
-            <div className="col-md-6 d-flex">
-              <div className="benefit-card">
-                <i className="fa fa-trophy"></i>
-                <h3>Recognition</h3>
-                <p>
-                  Recognition Each hotel could be nominated by our readers as
-                  "The Best Luxury Hotel of the Year," and Hotel could have
-                  access to data on the voting clients.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="section-newly-listen-hotel benefit-working-us">
-        <div className="container container-width">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="newly-hotel-body">
-                <h1>LuxuryHotelsMagazines.com in numbers</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="section-our-number">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-3 d-flex">
-              <div className="number-count">
-                <h1>550K+</h1>
-                <p>
-                  Explore over 570,000 luxury hotel listings worldwide, with 50
-                  new additions every day
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3 d-flex">
-              <div className="number-count">
-                <h1>89+</h1>
-                <p>
-                  We proudly serve 89 countries worldwide, and our presence
-                  continues to grow every day
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3 d-flex">
-              <div className="number-count">
-                <h1>13M+</h1>
-                <p>
-                  Monthly users will see your Hotel Profile on our 13 Social
-                  Networks, ensuring unparalleled exposure and visibility for
-                  your Hotel
-                </p>
-              </div>
-            </div>
-            <div className="col-md-3 d-flex">
-              <div className="number-count">
-                <h1>1M+</h1>
-                <p>
-                  We will promote your hotel to our over 1 Million subscribers,
-                  allowing them to book directly without your hotel paying any
-                  commissions to us
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 }

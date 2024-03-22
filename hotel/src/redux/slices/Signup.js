@@ -1,31 +1,31 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {loginApi} from '../AuthAction'
+import {loginApi, signup} from '../AuthAction'
 
 
 const initialState = {
   isLoading: false,
-  login: [],
+  Data: [],
   error: "",
 };
-const Login = createSlice({
-  name: "Login",
+const Signup = createSlice({
+  name: "Signup",
   initialState,
 
   extraReducers: (bulider) => {
-    bulider.addCase(loginApi.pending, (state, action) => {
+    bulider.addCase(signup.pending, (state, action) => {
       state.isLoading = true;
       state.error = null;
     });
-    bulider.addCase(loginApi.fulfilled, (state, action) => {
+    bulider.addCase(signup.fulfilled, (state, action) => {
       state.isLoading = false;
-      state.login = action?.payload;
+      state.dara = action?.payload;
       state.error = "";
     });
-    bulider.addCase(loginApi.rejected, (state, action) => {
+    bulider.addCase(signup.rejected, (state, action) => {
       state.error = "";
       state.isLoading = false;
     });
   },
 });
 
-export default Login.reducer;
+export default Signup.reducer;

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 
 function Header() {
+  
   return (
     <header>
    <nav className="navbar navbar-expand-lg bg-body-white border-bottom border-color-gold py-3">

@@ -1,4 +1,6 @@
 import { Inter } from "next/font/google";
+import {  ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./globals.css";
 import "./main.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
         <ThemeProviders>
+        <ToastContainer/>
          {children}
         </ThemeProviders>
       </body>

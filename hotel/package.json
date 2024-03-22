@@ -24,6 +24,7 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18",
     "react-redux": "^9.1.0",
+    "react-toastify": "^10.0.5",
     "react-youtube": "^10.1.0",
     "sass": "^1.72.0",
     "smooth-scrollbar-react": "^2.4.1",
