@@ -1,4 +1,3 @@
-// components/RequireAuth.js
 "use client"
 import { useEffect } from 'react';
 import { getUserFromToken, isAuthenticated } from '../service/auth';
@@ -15,7 +14,7 @@ const UserAuth = ({ children }) => {
     }else{
         router?.replace('/auth/create-profile')
     }
-  }, []);
+  }, [router]);
 
   return isAuthenticated() ? children : null;
 };

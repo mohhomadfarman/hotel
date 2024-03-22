@@ -93,6 +93,7 @@ l-140 0 0 -680z m357 477 c134 -68 191 -229 129 -362 -47 -101 -158 -170 -263
                 <Link className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     News
                 </Link>
+                
                 <ul className="dropdown-menu">
                   <li><Link className="dropdown-item" href="#">Hotel News</Link></li>
                   <li><Link className="dropdown-item" href="#">General News</Link></li>

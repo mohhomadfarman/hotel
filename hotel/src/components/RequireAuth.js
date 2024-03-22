@@ -11,7 +11,7 @@ const RequireAuth = ({ children }) => {
     if (!isAuthenticated()) {
       router.push('/auth/login');
     }
-  }, []);
+  }, [router]);
 
   return isAuthenticated() ? children : null;
 };

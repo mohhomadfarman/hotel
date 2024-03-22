@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Navigation } from 'swiper/modules';
+import { Navigation } from "swiper/modules";
+import Carousel from "react-bootstrap/Carousel";
 function MeinApp() {
   const swiperTabs = useSwiper();
   useEffect(() => {
@@ -21,8 +22,7 @@ function MeinApp() {
     return () => {
       window.removeEventListener("message", handleMessage);
     };
-       // eslint-disable-next-line react-hooks/exhaustive-deps
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
@@ -180,7 +180,9 @@ function MeinApp() {
                     className="form-select bg-body"
                     aria-label="Default select example"
                   >
-                    <option defaultValue="Select Country">Select Country</option>
+                    <option defaultValue="Select Country">
+                      Select Country
+                    </option>
                     <option value="1">Cardiologists</option>
                     <option value="2">Endocrinologist</option>
                     <option value="3">Oncologist</option>
@@ -418,228 +420,78 @@ function MeinApp() {
           <div className="row">
             <div className="col-md-4 ">
               <div className="carausel-perent">
-                <div id="carouselExampleIndicators" className="carousel slide ">
-                  <div className="carousel-indicators">
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 3"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide-to="3"
-                      aria-label="Slide 4"
-                    ></button>
-                  </div>
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <Image
-                        src="/luxury-magazine-1.webp"
-                        className="d-block img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <Image
-                        src="/luxury-magazine-2.webp"
-                        className="d-block img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <Image
-                        src="/luxury-magazine-3.webp"
-                        className="d-block img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <Image
-                        src="/luxury-magazine-4.webp"
-                        className="d-block img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-                </div>
+                <Carousel>
+                  <Carousel.Item interval={1000}>
+                    <Image
+                      src="/luxury-magazine-1.webp"
+                      className="d-block img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={500}>
+                    <Image
+                      src="/luxury-magazine-2.webp"
+                      className="d-block img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <Image
+                      src="/luxury-magazine-3.webp"
+                      className="d-block img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <Image
+                      src="/luxury-magazine-4.webp"
+                      className="d-block img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                  </Carousel.Item>
+                </Carousel>
               </div>
             </div>
 
             <div className="col-md-8">
               <div className="carausel-perent">
-                <div
-                  id="carouselExampleIndicators1"
-                  className="carousel slide "
-                >
-                  <div className="carousel-indicators ">
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="0"
-                      className="active"
-                      aria-current="true"
-                      aria-label="Slide 1"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="1"
-                      aria-label="Slide 2"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="2"
-                      aria-label="Slide 3"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="3"
-                      aria-label="Slide 4"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="4"
-                      aria-label="Slide 5"
-                    ></button>
-                    <button
-                      type="button"
-                      data-bs-target="#carouselExampleIndicators1"
-                      data-bs-slide-to="5"
-                      aria-label="Slide 6"
-                    ></button>
-                  </div>
-                  <div className="carousel-inner">
-                    <div className="carousel-item active">
-                      <Image
-                        src="/luxury-new-1.webp"
-                        className="img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <Image
-                        src="/luxury-new-2.webp"
-                        className="img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <Image
-                        src="/luxury-new-3.webp"
-                        className="img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <Image
-                        src="/luxury-new-3.webp"
-                        className="img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <Image
-                        src="/luxury-new-4.webp"
-                        className="img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                    <div className="carousel-item">
-                      <Image
-                        src="/luxury-new-4.webp"
-                        className="img-fluid"
-                        width={300}
-                        height={100}
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators1"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators1"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
-                </div>
+                <Carousel>
+                  <Carousel.Item interval={1000}>
+                    <Image
+                      src="/luxury-new-1.webp"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item interval={500}>
+                    <Image
+                      src="/luxury-new-2.webp"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <Image
+                      src="/luxury-new-3.webp"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                  </Carousel.Item>
+                </Carousel>
               </div>
             </div>
           </div>
@@ -940,7 +792,6 @@ function MeinApp() {
                     </button>
                   </div>
                   <div
-                
                     className="tab-content video-frame-body"
                     id="v-pills-tabContent"
                   >
@@ -1048,13 +899,13 @@ function MeinApp() {
               </div>
             </div>
             <div className="col-md-12">
-            <Swiper
+              <Swiper
                 navigation={{
-                  prevEl: '.prev',
-                  nextEl: '.next',
+                  prevEl: ".prev",
+                  nextEl: ".next",
                 }}
-                  modules={[Navigation]}
-                  // navigation={true}
+                modules={[Navigation]}
+                // navigation={true}
                 spaceBetween={50}
                 slidesPerView={1}
                 loop={true}
@@ -1084,69 +935,97 @@ function MeinApp() {
                 onSlideChange={() => console.log("slide change")}
                 onSwiper={(swiper) => console.log(swiper)}
               >
+                <SwiperSlide>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-2.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
 
-                <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-2.webp" width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-3.webp" width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-3.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-4.webp" width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-4.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-5.webp" width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-5.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-2.webp" width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-2.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
               </Swiper>
-             
             </div>
           </div>
         </div>
@@ -1285,13 +1164,13 @@ function MeinApp() {
               </div>
             </div>
             <div className="col-md-12">
-            <Swiper
-                 navigation={{
-                  prevEl: '.prev',
-                  nextEl: '.next',
+              <Swiper
+                navigation={{
+                  prevEl: ".prev",
+                  nextEl: ".next",
                 }}
-                  modules={[Navigation]}
-                  // navigation={true}
+                modules={[Navigation]}
+                // navigation={true}
                 spaceBetween={50}
                 slidesPerView={1}
                 loop={true}
@@ -1322,64 +1201,95 @@ function MeinApp() {
                 onSwiper={(swiper) => console.log(swiper)}
               >
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                      <Image src="/newly-hotel-2.webp" className="img-fluid" width={300} height={100} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-2.webp"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                      <Image src="/newly-hotel-3.webp"  width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-3.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-4.webp" width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-4.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-5.webp" width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-5.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-2.webp" width={300} height={200} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                            <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
-                          
-                              <p>May 10, 2023</p>
-                              <a href="#">Read More</a>
-                         
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe my-3">
+                    <Image
+                      src="/newly-hotel-2.webp"
+                      width={300}
+                      height={200}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <h5>
+                        The Westin Dubai Mina Seyahi Beach Resort & Marina
+                      </h5>
+
+                      <p>May 10, 2023</p>
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
               </Swiper>
             </div>
@@ -1403,15 +1313,21 @@ function MeinApp() {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-            <div className="prev pointer"> <Image src="/arrows.svg" width={80} height={80} alt=""/></div>
-            <div className="next pointer" > <Image src="/arrows.svg" width={80} height={80} alt=""/></div>
+              <div className="prev pointer">
+                {" "}
+                <Image src="/arrows.svg" width={80} height={80} alt="" />
+              </div>
+              <div className="next pointer">
+                {" "}
+                <Image src="/arrows.svg" width={80} height={80} alt="" />
+              </div>
 
-            <Swiper
+              <Swiper
                 navigation={{
-                  prevEl: '.prev',
-                  nextEl: '.next',
+                  prevEl: ".prev",
+                  nextEl: ".next",
                 }}
-                  modules={[Navigation]}
+                modules={[Navigation]}
                 spaceBetween={50}
                 slidesPerView={1}
                 loop={true}
@@ -1442,44 +1358,74 @@ function MeinApp() {
                 onSwiper={(swiper) => console.log(swiper)}
               >
                 <SwiperSlide>
-                <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                              <a href="#">Read More</a>
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe last-claim-swiper my-3">
+                    <Image
+                      src="/swiper-img.png"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                              <a href="#">Read More</a>
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe last-claim-swiper my-3">
+                    <Image
+                      src="/swiper-img.png"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                              <a href="#">Read More</a>
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe last-claim-swiper my-3">
+                    <Image
+                      src="/swiper-img.png"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                              <a href="#">Read More</a>
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe last-claim-swiper my-3">
+                    <Image
+                      src="/swiper-img.png"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
-                        <div className="card-body px-0 pb-0">
-                              <a href="#">Read More</a>
-                        </div>
-                      </div>
+                  <div className="card hotel-news-swipe last-claim-swiper my-3">
+                    <Image
+                      src="/swiper-img.png"
+                      className="img-fluid"
+                      width={300}
+                      height={100}
+                      alt=""
+                    />
+                    <div className="card-body px-0 pb-0">
+                      <a href="#">Read More</a>
+                    </div>
+                  </div>
                 </SwiperSlide>
               </Swiper>
 
