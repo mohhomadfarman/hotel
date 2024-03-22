@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { signup } from "../../../redux/AuthAction";
 import { toast } from "react-toastify";
 
-function page() {
+function Register() {
 const [name, setName] = useState()
 const [email, setEmail] = useState()
 const [password, setPassword] = useState()
@@ -109,4 +109,4 @@ console.log(isLoading)
   );
 }
 
-export default page;
+export default Register;
