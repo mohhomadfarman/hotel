@@ -4,11 +4,11 @@ import "./signup.scss";
 function page() {
   return (
     <>
-      <div class="section-list-luxury">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 m-auto">
-              <div class="form-body-text">
+      <div classname="section-list-luxury">
+        <div classname="container">
+          <div classname="row">
+            <div classname="col-md-6 m-auto">
+              <div classname="form-body-text">
                 <h1>
                   List Your Luxury Hotel On LuxuryHotelsMagazines.com & receive
                   direct commission-free bookings
@@ -20,39 +20,39 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="form">
-                <div class="form-floating mb-3">
+            <div classname="col-md-6">
+              <div classname="form">
+                <div classname="form-floating mb-3">
                   <input
                     type="email"
-                    class="form-control"
+                    classname="form-control"
                     id="floatingInput"
                     placeholder="name@example.com"
                   />
                   <label for="floatingInput">Your Name</label>
                 </div>
-                <div class="form-floating mb-3">
+                <div classname="form-floating mb-3">
                   <input
                     type="email"
-                    class="form-control"
+                    classname="form-control"
                     id="floatingInput"
                     placeholder="name@example.com"
                   />
                   <label for="floatingInput">Email address</label>
                 </div>
-                <div class="form-floating mb-3">
+                <div classname="form-floating mb-3">
                   <input
                     type="password"
-                    class="form-control"
+                    classname="form-control"
                     id="floatingPassword"
                     placeholder="Password"
                   />
                   <label for="floatingPassword">Password</label>
                 </div>
-                <div class="form-floating">
+                <div classname="form-floating">
                   <input
                     type="password"
-                    class="form-control"
+                    classname="form-control"
                     id="floatingPassword"
                     placeholder="Password"
                   />
@@ -61,7 +61,7 @@ function page() {
 
                 <button type="button">Submit</button>
 
-                <div class="already-have-account">
+                <div classname="already-have-account">
                   <p>
                     Already have an account! <a href="#">Login.</a>
                   </p>
@@ -72,11 +72,11 @@ function page() {
         </div>
       </div>
 
-      <div class="section-newly-listen-hotel benefit-working-us">
-        <div class="container container-width">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="newly-hotel-body">
+      <div classname="section-newly-listen-hotel benefit-working-us">
+        <div classname="container container-width">
+          <div classname="row">
+            <div classname="col-md-12">
+              <div classname="newly-hotel-body">
                 <h1> BENEFITS OF WORKING WITH US</h1>
               </div>
             </div>
@@ -84,12 +84,12 @@ function page() {
         </div>
       </div>
 
-      <div class="section-short-card">
-        <div class="container container-width">
-          <div class="row">
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-repeat "></i>
+      <div classname="section-short-card">
+        <div classname="container container-width">
+          <div classname="row">
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-repeat "></i>
                 <h3>Each Edition Rotation Program</h3>
                 <p>
                   Your hotel will be one of the top 40 most luxurious hotels
@@ -99,18 +99,18 @@ function page() {
               </div>
             </div>
 
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-recycle"></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-recycle"></i>
                 <h3>Zero commission charges</h3>
                 <p>
                   The hotel receives the full amount from all bookings made.
                 </p>
               </div>
             </div>
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-globe "></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-globe "></i>
                 <h3>Global exposure</h3>
                 <p>
                   Utilizing our AI technology, your hotel profile will be
@@ -119,9 +119,9 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-child"></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-child"></i>
                 <h3>Global Reach</h3>
                 <p>
                   Published & Promoted in 89 countries, integrating online (70%)
@@ -129,9 +129,9 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-internet-explorer"></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-internet-explorer"></i>
                 <h3>Extensive Digital Presence</h3>
                 <p>
                   Our magazines are available as free downloads on 5 independent
@@ -139,9 +139,9 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-facebook-square"></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-facebook-square"></i>
                 <h3>Social Media Engagement</h3>
                 <p>
                   We actively promote all of our hotels on 13 social networks,
@@ -149,16 +149,16 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-newspaper-o"></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-newspaper-o"></i>
                 <h3>Flexibility to add Exclusive Offers</h3>
                 <p>Could be published & changed any time during the year.</p>
               </div>
             </div>
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-address-book"></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-address-book"></i>
                 <h3>Effortless Bookings</h3>
                 <p>
                   Every hotel ad in the printed version is accompanied by QR
@@ -166,9 +166,9 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-database "></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-database "></i>
                 <h3>Data Analysis</h3>
                 <p>
                   Demonstrate that this program has increased direct bookings
@@ -176,9 +176,9 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-6 d-flex">
-              <div class="benefit-card">
-                <i class="fa fa-trophy"></i>
+            <div classname="col-md-6 d-flex">
+              <div classname="benefit-card">
+                <i classname="fa fa-trophy"></i>
                 <h3>Recognition</h3>
                 <p>
                   Recognition Each hotel could be nominated by our readers as
@@ -191,11 +191,11 @@ function page() {
         </div>
       </div>
 
-      <div class="section-newly-listen-hotel benefit-working-us">
-        <div class="container container-width">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="newly-hotel-body">
+      <div classname="section-newly-listen-hotel benefit-working-us">
+        <div classname="container container-width">
+          <div classname="row">
+            <div classname="col-md-12">
+              <div classname="newly-hotel-body">
                 <h1>LuxuryHotelsMagazines.com in numbers</h1>
               </div>
             </div>
@@ -203,11 +203,11 @@ function page() {
         </div>
       </div>
 
-      <div class="section-our-number">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 d-flex">
-              <div class="number-count">
+      <div classname="section-our-number">
+        <div classname="container">
+          <div classname="row">
+            <div classname="col-md-3 d-flex">
+              <div classname="number-count">
                 <h1>550K+</h1>
                 <p>
                   Explore over 570,000 luxury hotel listings worldwide, with 50
@@ -215,8 +215,8 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-3 d-flex">
-              <div class="number-count">
+            <div classname="col-md-3 d-flex">
+              <div classname="number-count">
                 <h1>89+</h1>
                 <p>
                   We proudly serve 89 countries worldwide, and our presence
@@ -224,8 +224,8 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-3 d-flex">
-              <div class="number-count">
+            <div classname="col-md-3 d-flex">
+              <div classname="number-count">
                 <h1>13M+</h1>
                 <p>
                   Monthly users will see your Hotel Profile on our 13 Social
@@ -234,8 +234,8 @@ function page() {
                 </p>
               </div>
             </div>
-            <div class="col-md-3 d-flex">
-              <div class="number-count">
+            <div classname="col-md-3 d-flex">
+              <div classname="number-count">
                 <h1>1M+</h1>
                 <p>
                   We will promote your hotel to our over 1 Million subscribers,
