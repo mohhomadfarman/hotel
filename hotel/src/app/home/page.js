@@ -1403,7 +1403,7 @@ function MeinApp() {
             <div className="who-we-are mb-2 d-flex justify-content-between align-items-center">
                
                <div className="text-center">
-                 <h1>Subscribe Newsletter</h1>
+                 <h1>SUBSCRIBE NEWSLETTER</h1>
                </div>
                </div>
                </div>

@@ -106,7 +106,7 @@ l-140 0 0 -680z m357 477 c134 -68 191 -229 129 -362 -47 -101 -158 -170 -263
         <div>
           <div className="right-line">
             <h2>
-            Contact With US
+            Contact With Us
           </h2>
         </div>
         </div>
