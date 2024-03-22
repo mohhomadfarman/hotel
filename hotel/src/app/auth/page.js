@@ -1,14 +1,13 @@
 "use client"
-import { Component, useEffect } from 'react';
+import { useEffect } from 'react';
 import {getUserFromToken} from '../../service/auth'
 import { useRouter } from 'next/navigation';
 
-function Auth({pageProps}) {
+function Auth({children}) {
   const router = useRouter();
 
   useEffect(() => {
     const user = getUserFromToken();
-    console.log(user)
     if (!user?.role || !user ) {
       router?.replace('/auth/create-profile'); // Replace the URL instead of pushing it
     }else{
@@ -16,7 +15,7 @@ function Auth({pageProps}) {
     }
   }, []);
 
-  return  pageProps;
+  return children;
 }
 
 export default Auth;
