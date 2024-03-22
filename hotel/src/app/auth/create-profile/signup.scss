@@ -1,0 +1,218 @@
+
+.section-link{
+    margin-top: 34px;
+}
+.section-link .link-tap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.section-link .link-tap a{
+    color: #856316;
+    font-size: 28px;
+    font-family: "Radley", serif;
+}
+.section-link .link-tap a:hover{
+    text-decoration: underline;
+}
+
+.section-list-luxury{
+    background-color: #B6191F;
+    margin:10px 0 56px 0;
+}
+
+.section-list-luxury .form-body-text h1{
+    font-size:32px;
+    color: #fff;
+    font-weight: 600;
+    font-family: "Radley", serif;
+
+}
+.section-list-luxury .form-body-text h1 span{
+    font-size:40px;
+}
+.section-list-luxury .form-body-text p{
+    color: #fff;
+    font-weight: 400;
+    font-family: "Radley", serif;
+    margin-top: 16px;
+}
+.section-list-luxury .form button:hover{
+    background-color: #624a12;
+
+}
+.section-list-luxury .form button{
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    background-color: #846316;
+    padding: 8px 34px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+    
+}
+.section-list-luxury .form{
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0px 0px 32px 0px #00000029;
+    margin:80px 0;
+    border-radius: 16px;
+    /* transform: translate(10px, 30px); */
+
+}
+.section-list-luxury .form .already-have-account p a{
+    color: #B6191F;
+    font-weight: 600;
+    text-decoration: underline;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.section-list-luxury .form .form-control:focus{
+    box-shadow: unset;
+}
+.section-list-luxury .form .form-control{
+    background-color: #ffffff00;
+    border: none;
+    border-bottom: 1px solid #B6191F;
+    border-radius: 0;
+}
+
+.section-list-luxuryn .form-floating>.form-control{
+    height: 0;
+    min-height:0;
+}
+
+
+.section-newly-listen-hotel{
+    background-color: #B6191F;
+    margin-bottom: 54px;
+  }
+
+  .section-newly-listen-hotel h1{
+    color: #846316;
+    font-weight: 400;
+    line-height: 30.33px;
+    font-family: "Radley", serif;
+    background-color: #fff;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: fit-content;
+    padding: 15px 28px;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+  .section-newly-listen-hotel.benefit-working-us h1{
+    font-size: 32px;
+  }
+
+  .section-short-card{
+    margin-bottom: 32px;
+  }
+  .section-short-card .benefit-card{
+    text-align: center;
+    padding: 30px 40px;
+    background-color: #f6f6f6;
+    border-radius:0 50px 0 50px;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+  .section-short-card .benefit-card:hover{
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #00000017;
+  }
+  .section-short-card .benefit-card i{
+    color: #856316;
+    font-size:36px;
+     font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px!important;
+  }
+
+  .section-short-card .benefit-card h3{
+    color: #434343;
+    font-family: "Radley", serif;
+    margin-bottom: 16px;
+  }
+
+  .section-short-card .benefit-card p{
+    color:#5e5e5e;
+  font-family: "Poppins", sans-serif;
+
+  }
+  .section-our-number{
+    margin-bottom: 34px;
+  }
+.section-our-number .number-count h1{
+    color: #856316;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.section-our-number .number-count p{
+    color:#5e5e5e;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.section-our-number .number-count{
+    padding: 12px 20px;
+    box-shadow: 0 0 20px 0 #00000017;
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+  
+@media(max-width:769px){
+    .section-list-luxury .form-body-text h1{
+        font-size: 22px;
+    }
+    .section-list-luxury .form-body-text h1 span{
+        font-size: 30px;
+    }
+
+    .section-link .link-tap a{
+        font-size:18px;
+    }
+    .section-link .link-tap{
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .section-list-luxury .form-body-text{
+        margin-top: 32px;
+    }
+    .section-list-luxury .form{
+        margin-top: 32px;
+    }
+
+    .section-newly-listen-hotel.benefit-working-us h1{
+        font-size: 24px;
+    }
+
+
+    .section-our-number .number-count{
+        margin-bottom:32px;
+        padding: 24px 20px;
+    }
+}
+
+
+
+
+
+
+
+  

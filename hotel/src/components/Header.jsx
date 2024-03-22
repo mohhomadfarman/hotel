@@ -10,7 +10,7 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <div className="navbar-nav gap-4">
-              <Link className="nav-link active" aria-current="page" href="#">List Your Hotel</Link>
+              <Link className="nav-link active" aria-current="page" href="/auth/create-profile">List Your Hotel</Link>
               <Link className="nav-link" href="#">Publish News</Link>
               <Link className="nav-link" href="/auth/login">Login</Link>
 
@@ -23,7 +23,7 @@ function Header() {
       </nav>
       <nav className="navbar navbar-expand-lg bg-body-white py-3">
         <div className="container">
-          <Link className="navbar-brand" href="#">
+          <Link className="navbar-brand" href="/">
             <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="318px" height="auto" viewBox="0 0 1090.000000 136.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,136.000000) scale(0.100000,-0.100000)" fill="#B6191F"
     stroke="none">

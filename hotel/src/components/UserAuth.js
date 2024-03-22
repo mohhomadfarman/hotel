@@ -1,5 +1,5 @@
 // components/RequireAuth.js
-
+"use client"
 import { useEffect } from 'react';
 import { getUserFromToken, isAuthenticated } from '../service/auth';
 import { useRouter } from 'next/navigation';
@@ -13,7 +13,7 @@ const UserAuth = ({ children }) => {
     if (user?.role === 'hotel') {
       router?.replace('/users/home'); // Replace the URL instead of pushing it
     }else{
-        router?.replace('auth/create-profile')
+        router?.replace('/auth/create-profile')
     }
   }, []);
 

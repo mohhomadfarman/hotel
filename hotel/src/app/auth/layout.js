@@ -1,6 +1,9 @@
 
 import { Inter } from "next/font/google";
 import "./login.scss";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+import UserAuth from '../../components/UserAuth';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +15,14 @@ export const metadata = {
 export default function AuthLayout({ children }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={inter.className}>{children}</body>
+      <body suppressHydrationWarning={true} className={inter.className}>
+      <Header/>
+      {/* <UserAuth> */}
+      {children}
+      {/* </UserAuth> */}
+      <Footer/>
+ 
+      </body>
     </html>
   );
 }
