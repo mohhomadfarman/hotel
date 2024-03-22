@@ -180,7 +180,7 @@ function MeinApp() {
                     className="form-select bg-body"
                     aria-label="Default select example"
                   >
-                    <option selected>Select Country</option>
+                    <option defaultValue="Select Country">Select Country</option>
                     <option value="1">Cardiologists</option>
                     <option value="2">Endocrinologist</option>
                     <option value="3">Oncologist</option>
@@ -227,6 +227,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -252,6 +253,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -277,6 +279,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -302,6 +305,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -327,6 +331,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -351,6 +356,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -375,6 +381,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -447,6 +454,7 @@ function MeinApp() {
                         className="d-block img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div className="carousel-item">
@@ -455,6 +463,7 @@ function MeinApp() {
                         className="d-block img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div className="carousel-item">
@@ -463,6 +472,7 @@ function MeinApp() {
                         className="d-block img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div className="carousel-item">
@@ -471,6 +481,7 @@ function MeinApp() {
                         className="d-block img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                   </div>
@@ -555,6 +566,7 @@ function MeinApp() {
                         className="img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div className="carousel-item">
@@ -563,6 +575,7 @@ function MeinApp() {
                         className="img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div className="carousel-item">
@@ -571,6 +584,7 @@ function MeinApp() {
                         className="img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div className="carousel-item">
@@ -579,6 +593,7 @@ function MeinApp() {
                         className="img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div className="carousel-item">
@@ -587,6 +602,7 @@ function MeinApp() {
                         className="img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div className="carousel-item">
@@ -595,6 +611,7 @@ function MeinApp() {
                         className="img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                   </div>
@@ -675,6 +692,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                   </div>
                 </SwiperSlide>
@@ -685,6 +703,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                   </div>
                 </SwiperSlide>
@@ -695,6 +714,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                   </div>
                 </SwiperSlide>
@@ -705,6 +725,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                   </div>
                 </SwiperSlide>
@@ -715,6 +736,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                   </div>
                 </SwiperSlide>
@@ -725,6 +747,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                   </div>
                 </SwiperSlide>
@@ -757,6 +780,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -782,6 +806,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -807,6 +832,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -832,6 +858,7 @@ function MeinApp() {
                       className="img-fluid"
                       width={300}
                       height={100}
+                      alt=""
                     />
                     <div className="card-body newly-hotel-card-boby">
                       <div className="d-flex justify-content-between">
@@ -923,6 +950,7 @@ function MeinApp() {
                         className="img-fluid"
                         width={300}
                         height={100}
+                        alt=""
                       />
                     </div>
                     <div
@@ -1059,7 +1087,7 @@ function MeinApp() {
 
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-2.webp" width={300} height={200}/>
+                        <Image src="/newly-hotel-2.webp" width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1071,7 +1099,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-3.webp" width={300} height={200}/>
+                        <Image src="/newly-hotel-3.webp" width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1083,7 +1111,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-4.webp" width={300} height={200}/>
+                        <Image src="/newly-hotel-4.webp" width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1095,7 +1123,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-5.webp" width={300} height={200}/>
+                        <Image src="/newly-hotel-5.webp" width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1107,7 +1135,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-2.webp" width={300} height={200}/>
+                        <Image src="/newly-hotel-2.webp" width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1295,7 +1323,7 @@ function MeinApp() {
               >
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                      <Image src="/newly-hotel-2.webp" className="img-fluid" width={300} height={100}/>
+                      <Image src="/newly-hotel-2.webp" className="img-fluid" width={300} height={100} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1307,7 +1335,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                      <Image src="/newly-hotel-3.webp"  width={300} height={200}/>
+                      <Image src="/newly-hotel-3.webp"  width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1319,7 +1347,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-4.webp" width={300} height={200}/>
+                        <Image src="/newly-hotel-4.webp" width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1331,7 +1359,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-5.webp" width={300} height={200}/>
+                        <Image src="/newly-hotel-5.webp" width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1343,7 +1371,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe my-3">
-                        <Image src="/newly-hotel-2.webp" width={300} height={200}/>
+                        <Image src="/newly-hotel-2.webp" width={300} height={200} alt=""/>
                         <div className="card-body px-0 pb-0">
                             <h5>The Westin Dubai Mina Seyahi Beach Resort & Marina</h5>
                           
@@ -1415,7 +1443,7 @@ function MeinApp() {
               >
                 <SwiperSlide>
                 <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
+                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
                         <div className="card-body px-0 pb-0">
                               <a href="#">Read More</a>
                         </div>
@@ -1423,7 +1451,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
+                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
                         <div className="card-body px-0 pb-0">
                               <a href="#">Read More</a>
                         </div>
@@ -1431,7 +1459,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
+                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
                         <div className="card-body px-0 pb-0">
                               <a href="#">Read More</a>
                         </div>
@@ -1439,7 +1467,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
+                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
                         <div className="card-body px-0 pb-0">
                               <a href="#">Read More</a>
                         </div>
@@ -1447,7 +1475,7 @@ function MeinApp() {
                 </SwiperSlide>
                 <SwiperSlide>
                 <div className="card hotel-news-swipe last-claim-swiper my-3">
-                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100}/>
+                        <Image src="/swiper-img.png" className="img-fluid" width={300} height={100} alt=""/>
                         <div className="card-body px-0 pb-0">
                               <a href="#">Read More</a>
                         </div>
