@@ -1,5 +1,5 @@
 "use client"
-import UserAuth from '../../components/UserAuth';
+import UserAuth from '../../../components/UserAuth';
 import Login from './login/page'
 
 import React from 'react'

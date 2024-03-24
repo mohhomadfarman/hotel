@@ -7,11 +7,8 @@ import LoginLayout from "@/components/Layouts/LoginLayout";
 import { useDispatch } from "react-redux";
 import { login } from "@/redux/AuthAction";
 import Cookies from 'js-cookie';
-
-// export const metadata: Metadata = {
-//   title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
-//   description: "This is Next.js Signin Page TailAdmin Dashboard Template",
-// };
+import IsLogin from "@/components/Layouts/IsLogin";
+import { getUserFromToken } from "@/service/auth";
 
 const SignIn = () => {
 
@@ -27,6 +24,7 @@ const signupBtn = async () => {
     await dispatch(login(payload)).then((res)=>{
       Cookies.set("token", res?.payload?.token);
       // cookies.set("token", token);
+        router.replace('/dashboard')
     })
     // Dispatch successful login action, navigate to next screen, etc.
   } catch (error) {
@@ -35,6 +33,7 @@ const signupBtn = async () => {
 };
 
   return (
+    <IsLogin>
     <LoginLayout>
       <Breadcrumb pageName="Sign In" />
 
@@ -323,6 +322,7 @@ const signupBtn = async () => {
         </div>
       </div>
     </LoginLayout>
+   </IsLogin>
   );
 };
 

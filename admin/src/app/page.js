@@ -1,17 +1,19 @@
-"use client";
+"use client"
+import { Metadata } from "next";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import Carousel from "react-bootstrap/Carousel";
-import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
-import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
-import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
-import { HomePage } from "../../redux/AuthAction";
-function MeinApp() {
+import { HomePage } from "@/redux/AuthAction";
+import HomeLayout from "@/components/Layouts/HomeLayout";
+import IsLogin from "@/components/Layouts/IsLogin";
+
+
+export default function Home() {
   const swiperTabs = useSwiper();
   const dispatch =useDispatch()
 
@@ -24,6 +26,8 @@ function MeinApp() {
   const HomeData = useSelector((state)=>state?.Home?.data?.data)
   return (
     <>
+      <IsLogin>
+      <HomeLayout>
       <div className="section-top-video-bg">
         <div className="container-fluid video-text-upper-body">
           <div className="row">
@@ -521,8 +525,8 @@ function MeinApp() {
                 onSlideChange={() => console.log("slide change")}
                 onSwiper={(swiper) => console.log(swiper)}
               >
-                {HomeData?.workingBrands?.map((item)=>(
-                  <SwiperSlide>
+                {HomeData?.workingBrands?.map((item,key)=>(
+                  <SwiperSlide key={key}>
                   <div className="card my-card">
                     <Image
                       src={`/${item}`}
@@ -1361,8 +1365,8 @@ function MeinApp() {
           </div>
         </div>
       </div>
+      </HomeLayout>
+      </IsLogin>
     </>
   );
 }
-
-export default MeinApp;

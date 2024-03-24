@@ -52,3 +52,10 @@ export const GetmyHotel = createAsyncThunk("GetmyHotel", async (payload) => {
   const response = await axiosInstanceGet.get(`api/hotels/my`, payload)
   return response.data;
 })
+
+
+
+export const HomePage = createAsyncThunk("HomePage", async (payload) => {
+  const response = await axiosInstance.get(`api/homes`, payload)
+  return response.data;
+})
