@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+    
       <DefaultLayout>
         <h1>dashbard</h1>
       </DefaultLayout>

@@ -1,0 +1,47 @@
+.HOtelCardWrraperr h5{
+    color: #a99349;
+    width: 100%;
+}
+.EditBtn
+{
+    background: #bb2429;
+}
+
+
+.my-botton button{
+    color: #fff;
+    font-weight: 500;
+    background-color: #d80f0f;
+    border: 1px solid red;
+    width:fit-content;
+    border-radius: 0.5rem;
+    padding:10px 10px;
+    transition: all 0.4s ease-in-out;
+    margin-bottom: 16px;
+}
+.my-botton button:hover{
+    background-color: #ae0b0b;
+}
+.my-botton button
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.d-flex{
+    display: flex;
+} 
+.justify-content-end{
+    justify-content: flex-end;
+}
+.w-100{
+    width: 100%;
+}
+.form-wrraper
+{
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}

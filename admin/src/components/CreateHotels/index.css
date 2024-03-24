@@ -1,0 +1,47 @@
+
+
+.my-botton button{
+    color: #fff;
+    font-weight: 500;
+    background-color: #d80f0f;
+    border: 1px solid red;
+    width:124px;
+    border-radius: 0.5rem;
+    padding:6px 0;
+    transition: all 0.4s ease-in-out;
+}
+.my-botton button:hover{
+    background-color: #ae0b0b;
+}
+.my-botton button.bg-bg-primary:hover
+{
+    background-color: #06731c;
+}
+.my-botton button.bg-bg-primary{
+background-color: #04841e;
+border: #04841e;
+}
+.contact-heading h2{
+    color: #d80f0f;
+    font-size:24px;
+    margin: 16px 0;
+}
+
+.my-botton.my-flex-botton{
+    display: flex;
+    justify-content: space-between;
+}
+.my-botton.my-flex-botton button:nth-child(1){
+    background-color: transparent;
+    color: #d80f0f;
+}
+.btn-footer
+{
+    justify-content: flex-end;
+    width: 100%;
+}
+@media(max-width:769px){
+    .my-flex-input{
+        flex-direction: column;
+    }
+}

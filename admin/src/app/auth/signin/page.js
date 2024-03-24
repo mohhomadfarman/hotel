@@ -1,17 +1,39 @@
+"use client"
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
-import { Metadata } from "next";
-import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import LoginLayout from "@/components/Layouts/LoginLayout";
+import { useDispatch } from "react-redux";
+import { login } from "@/redux/AuthAction";
+import Cookies from 'js-cookie';
 
-export const metadata: Metadata = {
-  title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
-  description: "This is Next.js Signin Page TailAdmin Dashboard Template",
+// export const metadata: Metadata = {
+//   title: "Next.js SignIn Page | TailAdmin - Next.js Dashboard Template",
+//   description: "This is Next.js Signin Page TailAdmin Dashboard Template",
+// };
+
+const SignIn = () => {
+
+const dispatch = useDispatch()
+
+
+const signupBtn = async () => {
+  try {
+    const payload = {
+      email:"mohhomadfarman@gmail.com",
+      password:"123456789"
+    };
+    await dispatch(login(payload)).then((res)=>{
+      Cookies.set("token", res?.payload?.token);
+      // cookies.set("token", token);
+    })
+    // Dispatch successful login action, navigate to next screen, etc.
+  } catch (error) {
+    // Handle errors
+  }
 };
 
-const SignIn: React.FC = () => {
   return (
     <LoginLayout>
       <Breadcrumb pageName="Sign In" />
@@ -243,7 +265,8 @@ const SignIn: React.FC = () => {
 
                 <div className="mb-5">
                   <input
-                    type="submit"
+                  onClick={signupBtn}
+                    type="button"
                     value="Sign In"
                     className="w-full cursor-pointer rounded-lg border border-primary bg-danger p-4 text-white transition hover:bg-opacity-90"
                   />

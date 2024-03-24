@@ -16,3 +16,10 @@ export const signup = createAsyncThunk("signup", async (payload) => {
   return response.data;
 })
 
+
+// Abc
+
+export const HomePage = createAsyncThunk("HomePage", async (payload) => {
+  const response = await axiosInstance.get(`api/homes`, payload)
+  return response.data;
+})

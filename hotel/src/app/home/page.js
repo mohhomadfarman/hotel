@@ -9,29 +9,19 @@ import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import { toast } from "react-toastify";
+import { useDispatch, useSelector } from "react-redux";
+import { HomePage } from "../../redux/AuthAction";
 function MeinApp() {
   const swiperTabs = useSwiper();
-  useEffect(()=>{
-    toast("hello")
-    },[])
+  const dispatch =useDispatch()
+
   useEffect(() => {
-    // Function to handle messages from the iframe
-    const handleMessage = (event) => {
-      if (event.origin === "https://play.google.com") {
-        // Handle message from iframe
-        console.log("Message from iframe:", event.data);
-      }
-    };
-
-    // Event listener for messages from iframe
-    window.addEventListener("message", handleMessage);
-
-    // Cleanup function
-    return () => {
-      window.removeEventListener("message", handleMessage);
-    };
+    dispatch(HomePage())
+ 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const HomeData = useSelector((state)=>state?.Home?.data?.data)
   return (
     <>
       <div className="section-top-video-bg">
@@ -45,7 +35,7 @@ function MeinApp() {
                 type="text/html"
                 width="100%"
                 height="450px"
-                src="https://www.youtube.com/embed/_-TTQBUPz6w?&autoplay=1&mute=1&loop=1&color=white&controls=0&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=_-TTQBUPz6w"
+                src={HomeData?.heroVedio}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -58,23 +48,9 @@ function MeinApp() {
                 <div className="col-lg-5 col-md-7">
                   <div className="text-for-video-bg">
                     <p>
-                      <span>Luxury Hotels</span>, a renowned global brand
-                      founded in England <span>17 years ago</span>, is currently
-                      present in <span>89 countries</span>. We provide{" "}
-                      <span>Luxury Hotels</span> for affluent travellers through
-                      our online platform and in print and digital formats. Each
-                      Edition is accessible for free download on 5 different
-                      platforms and attracts 4-5 million online readers
-                      annually.
+                      {HomeData?.heroText}
                     </p>
-                    <p>
-                      Through our Printed Edition Rotation Program, your hotel
-                      will be featured as one of the top{" "}
-                      <span>Luxury Hotels</span> and will ensure a continuous
-                      influx of bookings and a consistent occupancy rate of{" "}
-                      <span>800,000 to 1 million tourists</span> throughout the
-                      year, all without any commission fees.
-                    </p>
+                  
                   </div>
                 </div>
 
@@ -218,7 +194,7 @@ function MeinApp() {
           <div className="row">
             <div className="col-md-12">
               <div className="newly-hotel-body">
-                <h1>NEWLY LISTED HOTELS</h1>
+                <h1>{HomeData?.hotelListHeading}</h1>
               </div>
             </div>
           </div>
@@ -416,7 +392,7 @@ function MeinApp() {
           <div className="row">
             <div className="col-md-12">
               <div className="newly-hotel-body">
-                <h1>FORTHCOMING LUXURY HOTELS EDITIONS</h1>
+              <h1>{HomeData?.hotelEditionHeading}</h1>
               </div>
             </div>
           </div>
@@ -545,10 +521,11 @@ function MeinApp() {
                 onSlideChange={() => console.log("slide change")}
                 onSwiper={(swiper) => console.log(swiper)}
               >
-                <SwiperSlide>
+                {HomeData?.workingBrands?.map((item)=>(
+                  <SwiperSlide>
                   <div className="card my-card">
                     <Image
-                      src="/swiper-logo-1.webp"
+                      src={`/${item}`}
                       className="img-fluid"
                       width={300}
                       height={100}
@@ -556,7 +533,9 @@ function MeinApp() {
                     />
                   </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                ))}
+                
+                {/* <SwiperSlide>
                   <div className="card my-card">
                     <Image
                       src="/swiper-logo-2.webp"
@@ -610,7 +589,7 @@ function MeinApp() {
                       alt=""
                     />
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
               </Swiper>
             </div>
           </div>
@@ -622,7 +601,8 @@ function MeinApp() {
           <div className="row">
             <div className="col-md-12">
               <div className="newly-hotel-body">
-                <h1>BEST LUXURY HOTELS OF THE YEAR</h1>
+              <h1>{HomeData?.sponsoredHeaing}</h1>
+
               </div>
             </div>
           </div>
@@ -744,7 +724,7 @@ function MeinApp() {
             <div className="col-md-12">
 
               <div className="newly-hotel-body">
-                <h1>UNVEIL NEW LUXE GETAWAYS EVERY WEEK</h1>
+              <h1>{HomeData?.sponsoredHeaing}</h1>
               </div>
             </div>
           </div>
