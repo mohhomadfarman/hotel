@@ -26,7 +26,7 @@ export default function Home() {
   const HomeData = useSelector((state)=>state?.Home?.data?.data)
   return (
     <>
-      <IsLogin>
+      {/* <IsLogin> */}
       <HomeLayout>
       <div className="section-top-video-bg">
         <div className="container-fluid video-text-upper-body">
@@ -1366,7 +1366,7 @@ export default function Home() {
         </div>
       </div>
       </HomeLayout>
-      </IsLogin>
+      {/* </IsLogin> */}
     </>
   );
 }

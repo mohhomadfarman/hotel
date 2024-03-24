@@ -1,14 +1,5 @@
 "use client";
-import "jsvectormap/dist/css/jsvectormap.css";
-import "flatpickr/dist/flatpickr.min.css";
-import "@/css/satoshi.css";
-import "@/css/style.css";
-import 'react-toastify/dist/ReactToastify.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import "./globals.css";
-import "./main.scss";
+
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
 import {ThemeProviders} from './providers'

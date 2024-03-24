@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
@@ -9,31 +9,44 @@ import { login } from "@/redux/AuthAction";
 import Cookies from 'js-cookie';
 import IsLogin from "@/components/Layouts/IsLogin";
 import { getUserFromToken } from "@/service/auth";
+import Loader from "@/components/common/Loader";
 
 const SignIn = () => {
-
+const [email,setEmail] =useState()
+const [password,setPassword] =useState()
+const [isLogin,setIsLogin] =useState(false)
 const dispatch = useDispatch()
-
 
 const signupBtn = async () => {
   try {
     const payload = {
-      email:"mohhomadfarman@gmail.com",
-      password:"123456789"
+      email: email,
+      password: password
     };
-    await dispatch(login(payload)).then((res)=>{
-      Cookies.set("token", res?.payload?.token);
-      // cookies.set("token", token);
-        router.replace('/dashboard')
-    })
-    // Dispatch successful login action, navigate to next screen, etc.
+
+    setIsLogin(true); // Set loading state to true
+
+    const response = await dispatch(login(payload)); // Dispatch login action
+    const token = response?.payload?.token;
+
+    if (token) {
+      Cookies.set("token", token); // Set token in cookie
+      setIsLogin(false); // Set loading state to false
+      window.location.href = '/dashboard'; // Redirect to dashboard
+    } else {
+      // Handle case where token is not received
+      console.error("Token not received");
+    }
   } catch (error) {
     // Handle errors
+    console.error("Login error:", error.message);
+    setIsLogin(false); // Set loading state to false in case of error
   }
 };
 
   return (
     <IsLogin>
+      {/* {isLogin && <Loader />} */}
     <LoginLayout>
       <Breadcrumb pageName="Sign In" />
 
@@ -195,13 +208,14 @@ const signupBtn = async () => {
                 Sign In to TailAdmin
               </h2>
 
-              <form>
+           
                 <div className="mb-4">
                   <label className="mb-2.5 block font-medium text-black dark:text-white">
                     Email
                   </label>
                   <div className="relative">
                     <input
+                    onChange={(e)=>setEmail(e.target.value)}
                       type="email"
                       placeholder="Enter your email"
                       className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -229,13 +243,14 @@ const signupBtn = async () => {
 
                 <div className="mb-6">
                   <label className="mb-2.5 block font-medium text-black dark:text-white">
-                    Re-type Password
+                     Password
                   </label>
                   <div className="relative">
                     <input
+                    onChange={(e)=>setPassword(e.target.value)}
                       type="password"
                       placeholder="6+ Characters, 1 Capital letter"
-                      className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-white outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                      className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
                     />
 
                     <span className="absolute right-4 top-4">
@@ -316,7 +331,7 @@ const signupBtn = async () => {
                     </Link>
                   </p>
                 </div>
-              </form>
+             
             </div>
           </div>
         </div>
