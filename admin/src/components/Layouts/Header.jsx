@@ -16,7 +16,7 @@ function Header() {
               <Link className="nav-link active" aria-current="page" href={user?.role === "hotel" ? "/dashboard/my-hotels" :"/auth/signup"}>List Your Hotel</Link>
               <Link className="nav-link" href="#">Publish News</Link>
               {user?.role === "hotel" ? 
-              <Link className="nav-link" href="/Dashboard">Dashboard</Link> :
+              <Link className="nav-link" href="/dashboard">Dashboard</Link> :
               <Link className="nav-link" href="/auth/signin">Login</Link>
             }
              
