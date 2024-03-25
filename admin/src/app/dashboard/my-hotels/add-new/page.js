@@ -1,8 +1,8 @@
 import React from 'react'
-import CreateHotel from '../../../components/CreateHotels/CreateHotel'
 import '../index.css'
 import DefaultLayout from '@/components/Layouts/DefaultLayout'
 import Breadcrumb from '@/components/Breadcrumbs/Breadcrumb'
+import CreateHotel from '../../../../components/CreateHotels/CreateHotel'
 function AddHotel() {
   return (
     <DefaultLayout> 
