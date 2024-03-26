@@ -7,7 +7,7 @@ function AddHotel() {
   return (
     <DefaultLayout> 
      <Breadcrumb pageName="Add New Hotel" />
-    <div className='form-wrraper Steps'>
+    <div className='form-wrraper Steps mt-0'>
         <CreateHotel/>
     </div>
     </DefaultLayout>

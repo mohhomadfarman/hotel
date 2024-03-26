@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumbs/Breadcrumb";
@@ -8,11 +8,53 @@ import { Metadata } from "next";
 import DefaultLayout from "@/components/Layouts/DefaultLayout";
 import IsLogin from "@/components/Layouts/IsLogin";
 import LoginLayout from "@/components/Layouts/LoginLayout";
+import { useDispatch } from "react-redux";
+import Cookies from 'js-cookie';
+import { signup } from "@/redux/AuthAction";
+import Loader from "@/components/common/Loader";
+import { toast } from "react-toastify";
+
+const SignUp = () => {
+  const [email,setEmail] =useState()
+  const [name,setName] =useState()
+  const [password,setPassword] =useState()
+  const [cpassword,setCPassword] =useState()
+  const [isLogin,setIsLogin] =useState(false)
+  const dispatch = useDispatch()
 
 
-const SignUp: React.FC = () => {
+  const signupBtn = async () => {
+    const IsPasswordtrue = password === cpassword
+    try {
+      const payload = {
+        name:name,
+        email: email,
+        password: IsPasswordtrue ? password : null
+      };
+  
+      setIsLogin(true); // Set loading state to true
+  
+      const response = await dispatch(signup(payload)); // Dispatch login action
+      const msg = response?.payload?.msg;
+  
+      if (msg) {
+        toast(msg)
+        setIsLogin(false); // Set loading state to false
+        window.location.href = '/auth/signin'; // Redirect to dashboard
+      } else {
+        // Handle case where token is not received
+        console.error("Token not received");
+      }
+    } catch (error) {
+      // Handle errors
+      console.error("Login error:", error.message);
+      setIsLogin(false); // Set loading state to false in case of error
+    }
+  };
+  // signup
   return (
     <IsLogin>
+       {isLogin && <Loader />}
     <LoginLayout>
       <Breadcrumb pageName="Sign Up" />
 
@@ -173,13 +215,13 @@ const SignUp: React.FC = () => {
                 Sign Up to TailAdmin
               </h2>
 
-              <form>
                 <div className="mb-4">
                   <label className="mb-2.5 block font-medium text-black dark:text-white">
                     Name
                   </label>
                   <div className="relative">
                     <input
+                     onChange={(e)=>setName(e.target.value)}
                       type="text"
                       placeholder="Enter your full name"
                       className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -215,6 +257,7 @@ const SignUp: React.FC = () => {
                   </label>
                   <div className="relative">
                     <input
+                     onChange={(e)=>setEmail(e.target.value)}
                       type="email"
                       placeholder="Enter your email"
                       className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -246,6 +289,7 @@ const SignUp: React.FC = () => {
                   </label>
                   <div className="relative">
                     <input
+                    onChange={(e)=>setPassword(e.target.value)}
                       type="password"
                       placeholder="Enter your password"
                       className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -281,6 +325,7 @@ const SignUp: React.FC = () => {
                   </label>
                   <div className="relative">
                     <input
+                    onChange={(e)=>setCPassword(e.target.value)}
                       type="password"
                       placeholder="Re-enter your password"
                       className="w-full rounded-lg border border-stroke bg-transparent py-4 pl-6 pr-10 text-black outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
@@ -312,6 +357,7 @@ const SignUp: React.FC = () => {
 
                 <div className="mb-5">
                   <input
+                  onClick={signupBtn}
                     type="submit"
                     value="Create account"
                     className="w-full cursor-pointer rounded-lg border border-primary bg-primary p-4 text-white transition hover:bg-opacity-90"
@@ -363,7 +409,6 @@ const SignUp: React.FC = () => {
                     </Link>
                   </p>
                 </div>
-              </form>
             </div>
           </div>
         </div>

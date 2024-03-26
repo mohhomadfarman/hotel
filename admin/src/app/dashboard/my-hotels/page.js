@@ -25,7 +25,7 @@ useEffect(()=>{
       <Breadcrumb  pageName ="My Hotels"/>
       <div className="HOtelCardWrraperr">
       <div className='my-botton d-flex justify-content-end w-100'>
-      <Link href="/my-hotels/add-new">
+      <Link href="/dashboard/my-hotels/add-new">
     <button type='button'>
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16">
   <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
@@ -34,7 +34,7 @@ useEffect(()=>{
       Add New Hotel</button>
       </Link>
     </div>
-    {myHotels?.map((item,key)=>(
+    {myHotels?.reverse().map((item,key)=>(
       <div key={key} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
           <Image width={100} height={100} style={{maxWidth:"100%", width:"100%"}} className="rounded-t-lg" src={`/images/cards/03a041d4-c974-4842-b5c6-cbabf672e437.png`} alt="" />

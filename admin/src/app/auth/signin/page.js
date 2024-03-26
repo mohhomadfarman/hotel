@@ -10,6 +10,7 @@ import Cookies from 'js-cookie';
 import IsLogin from "@/components/Layouts/IsLogin";
 import { getUserFromToken } from "@/service/auth";
 import Loader from "@/components/common/Loader";
+import { toast } from "react-toastify";
 
 const SignIn = () => {
 const [email,setEmail] =useState()
@@ -28,7 +29,11 @@ const signupBtn = async () => {
 
     const response = await dispatch(login(payload)); // Dispatch login action
     const token = response?.payload?.token;
-
+    const msg = response?.payload?.msg;
+  
+    if (msg) {
+      toast(msg)
+    }
     if (token) {
       Cookies.set("token", token); // Set token in cookie
       setIsLogin(false); // Set loading state to false
@@ -46,7 +51,7 @@ const signupBtn = async () => {
 
   return (
     <IsLogin>
-      {/* {isLogin && <Loader />} */}
+      {isLogin && <Loader />}
     <LoginLayout>
       <Breadcrumb pageName="Sign In" />
 

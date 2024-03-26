@@ -3,9 +3,11 @@ import React, { useState, ReactNode } from "react";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
 import "jsvectormap/dist/css/jsvectormap.css";
+import 'react-toastify/dist/ReactToastify.css';
 import "flatpickr/dist/flatpickr.min.css";
 import "@/css/satoshi.css";
 import "@/css/style.css";
+import { ToastContainer } from "react-toastify";
 export default function LoginLayout({
   children,
 }: {
@@ -27,6 +29,7 @@ export default function LoginLayout({
           {/* <!-- ===== Main Content Start ===== --> */}
           <main>
             <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+              <ToastContainer/>
               {children}
             </div>
           </main>
